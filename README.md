@@ -19,9 +19,9 @@
             <p class="hero-label">НАША СВАДЬБА</p>
 
             <h1 class="couple-names">
-                Алан
+                Ерасыл
                 <span class="ampersand">&</span>
-                Алина
+                Дана
             </h1>
 
             <div class="wedding-date">
