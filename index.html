@@ -1,0 +1,1232 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="description"
+        content="Оставьте пожелание молодожёнам Алану и Алине"
+    >
+
+    <meta name="theme-color" content="#f5f1eb">
+
+    <title>Ерасыл & Дана — наша свадьба</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --background: #f5f1eb;
+            --background-light: #faf8f4;
+            --text: #25221f;
+            --muted-text: #736d66;
+            --accent: #8b6f58;
+            --accent-light: #c9ad95;
+            --accent-dark: #624c3c;
+            --line: rgba(74, 62, 52, 0.16);
+            --white: #ffffff;
+            --shadow: 0 30px 80px rgba(65, 52, 42, 0.1);
+            --serif: "Cormorant Garamond", Georgia, serif;
+            --sans: "Manrope", Arial, sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: var(--background);
+        }
+
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            color: var(--text);
+            background: var(--background);
+            font-family: var(--sans);
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .wedding-page {
+            position: relative;
+            width: 100%;
+            max-width: none;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: var(--background);
+        }
+
+        .wedding-background {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .blur-circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(30px);
+            opacity: 0.45;
+        }
+
+        .blur-circle-one {
+            top: 2%;
+            left: -220px;
+            width: 520px;
+            height: 520px;
+            background: rgba(220, 196, 178, 0.55);
+        }
+
+        .blur-circle-two {
+            top: 42%;
+            right: -280px;
+            width: 650px;
+            height: 650px;
+            background: rgba(196, 207, 188, 0.42);
+        }
+
+        .blur-circle-three {
+            bottom: 6%;
+            left: 5%;
+            width: 420px;
+            height: 420px;
+            background: rgba(216, 195, 175, 0.28);
+        }
+
+        .grain {
+            position: absolute;
+            inset: 0;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.8'/%3E%3C/svg%3E");
+        }
+
+        .hero-section {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            min-height: 100vh;
+            min-height: 100svh;
+            padding: 75px 24px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-label,
+        .section-label {
+            margin: 0 0 25px;
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+        }
+
+        .couple-names {
+            margin: 0;
+            font-family: var(--serif);
+            font-size: clamp(76px, 12vw, 155px);
+            font-weight: 400;
+            line-height: 0.76;
+            letter-spacing: -0.055em;
+        }
+
+        .ampersand {
+            display: block;
+            margin: 15px 0;
+            color: var(--accent);
+            font-size: 0.5em;
+            font-style: italic;
+            line-height: 0.7;
+        }
+
+        .wedding-date {
+            margin: 52px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .wedding-date-line {
+            width: 75px;
+            height: 1px;
+            background: var(--line);
+        }
+
+        .wedding-date p {
+            margin: 0;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.23em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin: 34px auto 0;
+            color: var(--muted-text);
+            font-family: var(--serif);
+            font-size: clamp(21px, 2.5vw, 29px);
+            font-weight: 400;
+            line-height: 1.45;
+        }
+
+        .main-button {
+            min-width: 275px;
+            min-height: 64px;
+            margin-top: 42px;
+            padding: 15px 17px 15px 29px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            color: var(--white);
+            background: var(--text);
+            border: 1px solid var(--text);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            box-shadow: 0 14px 35px rgba(53, 43, 36, 0.13);
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .main-button:hover {
+            transform: translateY(-3px);
+            background: var(--accent-dark);
+            box-shadow: 0 18px 40px rgba(53, 43, 36, 0.2);
+        }
+
+        .button-arrow {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            background: var(--white);
+            border-radius: 50%;
+            font-size: 17px;
+        }
+
+        .hero-decoration {
+            position: absolute;
+            top: 50%;
+            color: var(--accent);
+            font-size: 18px;
+            opacity: 0.5;
+        }
+
+        .hero-decoration-left {
+            left: 7%;
+        }
+
+        .hero-decoration-right {
+            right: 7%;
+        }
+
+        .scroll-text {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            transform: translateX(-50%);
+        }
+
+        .scroll-text span {
+            color: var(--muted-text);
+            font-size: 9px;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 30px;
+            margin-top: 10px;
+            overflow: hidden;
+            background: var(--line);
+        }
+
+        .scroll-line::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 15px;
+            background: var(--accent);
+            animation: scrollLine 1.8s ease-in-out infinite;
+        }
+
+        @keyframes scrollLine {
+            0% {
+                transform: translateY(-18px);
+            }
+
+            100% {
+                transform: translateY(35px);
+            }
+        }
+
+        .quote-section {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 110px 24px;
+        }
+
+        .quote-card {
+            width: 100%;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 80px 35px;
+            text-align: center;
+            border: 1px solid var(--line);
+            border-radius: 32px;
+            background: rgba(255, 255, 255, 0.36);
+            box-shadow: 0 20px 70px rgba(66, 54, 44, 0.04);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .quote-mark {
+            height: 45px;
+            color: var(--accent);
+            font-family: var(--serif);
+            font-size: 90px;
+            line-height: 1;
+        }
+
+        .quote-text {
+            margin: 20px 0 0;
+            font-family: var(--serif);
+            font-size: clamp(34px, 5vw, 59px);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+        }
+
+        .quote-caption {
+            margin: 30px 0 0;
+            color: var(--muted-text);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+        }
+
+        .form-section {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 110px 24px 130px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 70px;
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            border-radius: 36px;
+            background: rgba(250, 248, 244, 0.94);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .form-heading {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .form-heading h2 {
+            margin: 0;
+            font-family: var(--serif);
+            font-size: clamp(45px, 7vw, 71px);
+            font-weight: 400;
+            line-height: 0.98;
+            letter-spacing: -0.035em;
+        }
+
+        .form-heading-description {
+            max-width: 500px;
+            margin: 25px auto 0;
+            color: var(--muted-text);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .wish-form {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 11px;
+            color: var(--text);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 19px 20px;
+            color: var(--text);
+            background: transparent;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            outline: none;
+            font-family: var(--sans);
+            font-size: 15px;
+            font-weight: 400;
+            transition:
+                border-color 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .input-group textarea {
+            min-height: 185px;
+            padding-bottom: 42px;
+            resize: vertical;
+            line-height: 1.65;
+        }
+
+        .input-group input::placeholder,
+        .input-group textarea::placeholder {
+            color: #aaa39b;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-color: var(--accent);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(139, 111, 88, 0.08);
+        }
+
+        .character-counter {
+            position: absolute;
+            right: 16px;
+            bottom: 13px;
+            color: #aaa39b;
+            font-size: 10px;
+        }
+
+        .hidden-field {
+            position: absolute !important;
+            left: -9999px !important;
+            width: 1px !important;
+            height: 1px !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        .submit-button {
+            width: 100%;
+            min-height: 66px;
+            margin-top: 7px;
+            padding: 14px 15px 14px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--white);
+            background: var(--text);
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            font-family: var(--sans);
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 14px 35px rgba(53, 43, 36, 0.12);
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            background: var(--accent-dark);
+            box-shadow: 0 18px 40px rgba(53, 43, 36, 0.18);
+        }
+
+        .submit-button:disabled {
+            cursor: wait;
+            opacity: 0.7;
+            transform: none;
+        }
+
+        .submit-icon {
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            background: var(--white);
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .privacy-text {
+            margin: -10px 0 0;
+            color: #999189;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .form-error {
+            display: none;
+            margin: 0;
+            padding: 14px 17px;
+            color: #7d4038;
+            background: rgba(158, 74, 63, 0.08);
+            border: 1px solid rgba(158, 74, 63, 0.17);
+            border-radius: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .form-error.visible {
+            display: block;
+        }
+
+        .success-message {
+            display: none;
+            padding: 45px 0 20px;
+            text-align: center;
+        }
+
+        .success-message.active {
+            display: block;
+            animation: successAppear 0.7s ease forwards;
+        }
+
+        @keyframes successAppear {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            background: var(--accent);
+            border-radius: 50%;
+            font-size: 36px;
+            box-shadow: 0 16px 35px rgba(98, 76, 60, 0.18);
+        }
+
+        .success-message h3 {
+            margin: 0;
+            font-family: var(--serif);
+            font-size: 60px;
+            font-weight: 400;
+        }
+
+        .success-message p {
+            max-width: 400px;
+            margin: 18px auto 30px;
+            color: var(--muted-text);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .secondary-button {
+            padding: 15px 25px;
+            color: var(--text);
+            background: transparent;
+            border: 1px solid var(--line);
+            border-radius: 100px;
+            cursor: pointer;
+            font-family: var(--sans);
+            font-size: 12px;
+            transition:
+                background 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .secondary-button:hover {
+            background: var(--white);
+            border-color: var(--accent);
+        }
+
+        .wedding-footer {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 90px 24px 60px;
+            color: var(--white);
+            background: var(--text);
+            text-align: center;
+        }
+
+        .footer-symbol {
+            color: var(--accent-light);
+            font-family: var(--serif);
+            font-size: 45px;
+        }
+
+        .footer-names {
+            margin: 20px 0 0;
+            font-family: var(--serif);
+            font-size: clamp(44px, 7vw, 72px);
+            font-weight: 400;
+        }
+
+        .footer-date {
+            margin: 17px 0 0;
+            color: var(--accent-light);
+            font-size: 11px;
+            letter-spacing: 0.28em;
+        }
+
+        .footer-thanks {
+            margin: 45px 0 0;
+            color: rgba(255, 255, 255, 0.56);
+            font-size: 11px;
+            letter-spacing: 0.08em;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .confetti-piece {
+            position: fixed;
+            top: -30px;
+            z-index: 999999;
+            pointer-events: none;
+            opacity: 0.85;
+            transition:
+                transform 2.7s ease-out,
+                opacity 2.7s ease-out;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 100svh;
+                padding: 65px 20px 45px;
+            }
+
+            .couple-names {
+                font-size: clamp(72px, 24vw, 105px);
+                line-height: 0.82;
+            }
+
+            .wedding-date {
+                gap: 12px;
+                margin-top: 40px;
+            }
+
+            .wedding-date-line {
+                width: 30px;
+            }
+
+            .wedding-date p {
+                font-size: 10px;
+                letter-spacing: 0.15em;
+            }
+
+            .hero-description br {
+                display: none;
+            }
+
+            .hero-decoration,
+            .scroll-text {
+                display: none;
+            }
+
+            .main-button {
+                margin-top: 35px;
+            }
+
+            .quote-section {
+                padding: 70px 16px;
+            }
+
+            .quote-card {
+                padding: 60px 22px;
+                border-radius: 24px;
+            }
+
+            .quote-text br {
+                display: none;
+            }
+
+            .form-section {
+                padding: 60px 14px 90px;
+            }
+
+            .form-container {
+                padding: 50px 20px 35px;
+                border-radius: 25px;
+            }
+
+            .form-heading {
+                margin-bottom: 40px;
+            }
+
+            .wish-form {
+                gap: 24px;
+            }
+
+            .wedding-footer {
+                padding-top: 70px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero-section {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .hero-label,
+            .section-label {
+                letter-spacing: 0.27em;
+            }
+
+            .couple-names {
+                font-size: 76px;
+            }
+
+            .hero-description {
+                font-size: 21px;
+            }
+
+            .main-button {
+                width: 100%;
+                max-width: 330px;
+            }
+
+            .form-heading h2 {
+                font-size: 48px;
+            }
+
+            .quote-text {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="wedding-page">
+
+        <div class="wedding-background" aria-hidden="true">
+            <div class="blur-circle blur-circle-one"></div>
+            <div class="blur-circle blur-circle-two"></div>
+            <div class="blur-circle blur-circle-three"></div>
+            <div class="grain"></div>
+        </div>
+
+        <section class="hero-section">
+
+            <div class="hero-decoration hero-decoration-left" aria-hidden="true">
+                ✦
+            </div>
+
+            <div class="hero-decoration hero-decoration-right" aria-hidden="true">
+                ✦
+            </div>
+
+            <div class="hero-content reveal">
+
+                <p class="hero-label">
+                    Наша свадьба
+                </p>
+
+                <h1 class="couple-names">
+                    Алан
+                    <span class="ampersand">&</span>
+                    Алина
+                </h1>
+
+                <div class="wedding-date">
+                    <span class="wedding-date-line"></span>
+
+                    <p>
+                        12 сентября 2026
+                    </p>
+
+                    <span class="wedding-date-line"></span>
+                </div>
+
+                <p class="hero-description">
+                    Сегодня для нас особенный день.<br>
+                    Оставьте несколько тёплых слов, которые мы сохраним
+                    вместе с воспоминаниями об этом празднике.
+                </p>
+
+                <a href="#wish-form" class="main-button">
+                    <span>Оставить пожелание</span>
+                    <span class="button-arrow">↓</span>
+                </a>
+
+            </div>
+
+            <div class="scroll-text" aria-hidden="true">
+                <span>Листайте вниз</span>
+                <div class="scroll-line"></div>
+            </div>
+
+        </section>
+
+        <section class="quote-section">
+
+            <div class="quote-card reveal">
+
+                <div class="quote-mark" aria-hidden="true">
+                    “
+                </div>
+
+                <p class="quote-text">
+                    Счастье становится больше,<br>
+                    когда им делишься с близкими.
+                </p>
+
+                <p class="quote-caption">
+                    Спасибо, что разделяете этот день вместе с нами
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="form-section" id="wish-form">
+
+            <div class="form-container reveal">
+
+                <div class="form-heading">
+
+                    <p class="section-label">
+                        Книга пожеланий
+                    </p>
+
+                    <h2>
+                        Оставьте частичку тепла
+                    </h2>
+
+                    <p class="form-heading-description">
+                        Напишите пожелание, совет, воспоминание
+                        или несколько слов от сердца.
+                    </p>
+
+                </div>
+
+                <!--
+                    ВАЖНО:
+                    замените YOUR_FORM_ID на ID вашей формы Formspree.
+
+                    Было:
+                    https://formspree.io/f/YOUR_FORM_ID
+
+                    Должно быть примерно так:
+                    https://formspree.io/f/abcdefgh
+                -->
+
+                <form
+                    class="wish-form"
+                    id="weddingWishForm"
+                    action="https://formspree.io/f/YOUR_FORM_ID"
+                    method="POST"
+                >
+
+                    <div class="input-group">
+
+                        <label for="guestName">
+                            Ваше имя
+                        </label>
+
+                        <input
+                            type="text"
+                            id="guestName"
+                            name="Имя гостя"
+                            placeholder="Как к вам обращаться?"
+                            autocomplete="name"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="guestRelation">
+                            Кем вы приходитесь молодожёнам
+                        </label>
+
+                        <input
+                            type="text"
+                            id="guestRelation"
+                            name="Кем приходится"
+                            placeholder="Друг, родственник, коллега..."
+                            maxlength="150"
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="guestWish">
+                            Ваше пожелание
+                        </label>
+
+                        <textarea
+                            id="guestWish"
+                            name="Пожелание"
+                            rows="6"
+                            maxlength="1000"
+                            placeholder="Напишите несколько тёплых слов..."
+                            required
+                        ></textarea>
+
+                        <div class="character-counter">
+                            <span id="characterCount">0</span> / 1000
+                        </div>
+
+                    </div>
+
+                    <input
+                        type="text"
+                        name="_gotcha"
+                        class="hidden-field"
+                        tabindex="-1"
+                        autocomplete="off"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="Новое свадебное пожелание"
+                    >
+
+                    <p class="form-error" id="formError">
+                        Не удалось отправить пожелание. Пожалуйста, попробуйте ещё раз.
+                    </p>
+
+                    <button type="submit" class="submit-button">
+
+                        <span class="submit-text">
+                            Отправить пожелание
+                        </span>
+
+                        <span class="submit-icon">
+                            ♡
+                        </span>
+
+                    </button>
+
+                    <p class="privacy-text">
+                        Ваше пожелание увидят только молодожёны
+                    </p>
+
+                </form>
+
+                <div
+                    class="success-message"
+                    id="successMessage"
+                    aria-live="polite"
+                >
+
+                    <div class="success-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Спасибо!
+                    </h3>
+
+                    <p>
+                        Ваши слова стали частью нашей семейной истории.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="newWishButton"
+                    >
+                        Оставить ещё одно пожелание
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="wedding-footer">
+
+            <div class="footer-symbol" aria-hidden="true">
+                ∞
+            </div>
+
+            <p class="footer-names">
+                Алан & Алина
+            </p>
+
+            <p class="footer-date">
+                12 · 09 · 2026
+            </p>
+
+            <p class="footer-thanks">
+                С любовью и благодарностью каждому из вас
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("weddingWishForm");
+            const successMessage = document.getElementById("successMessage");
+            const newWishButton = document.getElementById("newWishButton");
+            const wishTextarea = document.getElementById("guestWish");
+            const characterCount = document.getElementById("characterCount");
+            const formError = document.getElementById("formError");
+            const submitButton = form.querySelector(".submit-button");
+            const submitText = form.querySelector(".submit-text");
+
+            wishTextarea.addEventListener("input", function () {
+                characterCount.textContent = wishTextarea.value.length;
+            });
+
+            const revealElements = document.querySelectorAll(".reveal");
+
+            if ("IntersectionObserver" in window) {
+                const revealObserver = new IntersectionObserver(
+                    function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("visible");
+                                revealObserver.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.12
+                    }
+                );
+
+                revealElements.forEach(function (element) {
+                    revealObserver.observe(element);
+                });
+            } else {
+                revealElements.forEach(function (element) {
+                    element.classList.add("visible");
+                });
+            }
+
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault();
+
+                formError.classList.remove("visible");
+
+                const formAction = form.getAttribute("action");
+
+                if (
+                    !formAction ||
+                    formAction.includes("YOUR_FORM_ID")
+                ) {
+                    formError.textContent =
+                        "Форма пока не подключена. Замените YOUR_FORM_ID на адрес вашей формы Formspree.";
+
+                    formError.classList.add("visible");
+                    return;
+                }
+
+                submitButton.disabled = true;
+                submitText.textContent = "Отправляем...";
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch(formAction, {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            Accept: "application/json"
+                        }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Ошибка отправки формы");
+                    }
+
+                    form.style.display = "none";
+                    successMessage.classList.add("active");
+
+                    createConfetti();
+                } catch (error) {
+                    formError.textContent =
+                        "Не удалось отправить пожелание. Проверьте интернет-соединение и попробуйте ещё раз.";
+
+                    formError.classList.add("visible");
+                } finally {
+                    submitButton.disabled = false;
+                    submitText.textContent = "Отправить пожелание";
+                }
+            });
+
+            newWishButton.addEventListener("click", function () {
+                form.reset();
+                characterCount.textContent = "0";
+                formError.classList.remove("visible");
+                successMessage.classList.remove("active");
+                form.style.display = "flex";
+
+                setTimeout(function () {
+                    document.getElementById("guestName").focus();
+                }, 100);
+            });
+
+            function createConfetti() {
+                const symbols = ["♡", "✦", "·", "❀"];
+
+                for (let i = 0; i < 34; i++) {
+                    const confetti = document.createElement("span");
+
+                    confetti.className = "confetti-piece";
+
+                    confetti.textContent =
+                        symbols[Math.floor(Math.random() * symbols.length)];
+
+                    confetti.style.left =
+                        Math.random() * 100 + "vw";
+
+                    confetti.style.color =
+                        Math.random() > 0.5
+                            ? "#8b6f58"
+                            : "#c4a98e";
+
+                    confetti.style.fontSize =
+                        12 + Math.random() * 17 + "px";
+
+                    document.body.appendChild(confetti);
+
+                    setTimeout(function () {
+                        confetti.style.transform =
+                            "translateY(110vh) rotate(" +
+                            Math.random() * 720 +
+                            "deg)";
+
+                        confetti.style.opacity = "0";
+                    }, 30);
+
+                    setTimeout(function () {
+                        confetti.remove();
+                    }, 2900);
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
+```
