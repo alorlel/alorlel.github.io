@@ -152,7 +152,7 @@
         .hero {
             position: relative;
             z-index: 1;
-            padding: 108px 24px 70px;
+            padding: 108px 24px 28px;
         }
 
         .hero-inner {
@@ -170,30 +170,30 @@
             box-shadow: var(--shadow);
         }
 
-        .hero-main-image {
+        .hero-image {
             position: absolute;
             inset: 0;
             z-index: 1;
         }
 
-        .hero-main-image img {
+        .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .hero-main-image::after {
+        .hero-image::after {
             content: "";
             position: absolute;
             inset: 0;
             background:
-                linear-gradient(90deg, rgba(27,22,19,0.60) 0%, rgba(27,22,19,0.36) 35%, rgba(27,22,19,0.10) 62%, rgba(27,22,19,0.18) 100%),
+                linear-gradient(90deg, rgba(27,22,19,0.64) 0%, rgba(27,22,19,0.42) 34%, rgba(27,22,19,0.16) 68%, rgba(27,22,19,0.14) 100%),
                 linear-gradient(to top, rgba(27,22,19,0.34), rgba(27,22,19,0.04));
         }
 
         .hero-overlay {
             position: relative;
-            z-index: 4;
+            z-index: 3;
             width: 100%;
             min-height: 760px;
             padding: 72px 68px;
@@ -205,7 +205,7 @@
 
         .eyebrow {
             margin: 0 0 22px;
-            color: rgba(255,255,255,0.86);
+            color: rgba(255,255,255,0.9);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.34em;
@@ -252,7 +252,7 @@
 
         .date-row p {
             margin: 0;
-            color: rgba(255,255,255,0.88);
+            color: rgba(255,255,255,0.9);
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 0.22em;
@@ -263,7 +263,7 @@
         .hero-text {
             max-width: 540px;
             margin: 26px 0 0;
-            color: rgba(255,255,255,0.88);
+            color: rgba(255,255,255,0.9);
             font-family: var(--serif);
             font-size: clamp(23px, 2.6vw, 32px);
             line-height: 1.36;
@@ -315,135 +315,58 @@
         .mini-note {
             max-width: 230px;
             margin: 0;
-            color: rgba(255,255,255,0.8);
+            color: rgba(255,255,255,0.82);
             font-size: 12px;
             line-height: 1.6;
         }
 
-        .floating-badge {
-            position: absolute;
-            top: 54px;
-            right: 440px;
-            z-index: 6;
-            width: 156px;
-            height: 156px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.74);
-            border: 1px solid rgba(255,255,255,0.76);
-            color: var(--accent-dark);
-            text-align: center;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            box-shadow: 0 16px 45px rgba(70, 50, 36, 0.14);
+        .second-photo-section {
+            position: relative;
+            z-index: 1;
+            padding: 0 24px 44px;
         }
 
-        .floating-badge p {
-            margin: 0;
-            font-family: var(--serif);
-            font-size: 23px;
-            line-height: 1.08;
+        .second-photo-wrap {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
         }
 
-        .floating-badge span {
-            display: block;
-            margin-top: 8px;
-            font-family: var(--sans);
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-        }
-
-        .floating-photo {
-            position: absolute;
-            z-index: 5;
+        .second-photo-card {
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
             overflow: hidden;
-            border: 9px solid rgba(255,255,255,0.8);
+            border-radius: 34px;
             background: #eadfd2;
             box-shadow: var(--shadow);
         }
 
-        .floating-photo img {
+        .second-photo-card img {
             width: 100%;
-            height: 100%;
+            height: 460px;
             object-fit: cover;
         }
 
-        .photo-two {
-            right: 320px;
-            bottom: 36px;
-            width: 295px;
-            height: 340px;
-            border-radius: 30px;
-            transform: rotate(-6deg);
-        }
-
-        .photo-three {
-            right: 88px;
-            bottom: 26px;
-            width: 220px;
-            height: 265px;
-            border-radius: 28px;
-            transform: rotate(5deg);
+        .second-photo-caption {
+            padding: 18px 22px 20px;
+            text-align: center;
+            background: rgba(255,255,255,0.55);
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
         }
 
         .wish-section {
             position: relative;
             z-index: 1;
-            padding: 36px 24px 120px;
+            padding: 12px 24px 120px;
         }
 
-        .wish-layout {
+        .wish-inner {
             width: 100%;
-            max-width: 1120px;
+            max-width: 860px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 34px;
-            align-items: stretch;
-        }
-
-        .wish-intro {
-            min-height: 620px;
-            padding: 42px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border-radius: 38px;
-            overflow: hidden;
-            color: var(--white);
-            background:
-                linear-gradient(to bottom, rgba(20,18,16,0.08), rgba(20,18,16,0.7)),
-                url("images/couple-2.jpg") center/cover no-repeat;
-            box-shadow: var(--shadow);
-        }
-
-        .wish-intro-top p {
-            margin: 0;
-            color: rgba(255,255,255,0.74);
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-        }
-
-        .wish-intro h2 {
-            margin: 18px 0 0;
-            font-family: var(--serif);
-            font-size: clamp(46px, 6vw, 76px);
-            font-weight: 400;
-            line-height: 0.95;
-            letter-spacing: -0.045em;
-        }
-
-        .wish-intro-bottom p {
-            max-width: 360px;
-            margin: 0;
-            color: rgba(255,255,255,0.84);
-            font-size: 15px;
-            line-height: 1.75;
         }
 
         .form-card {
@@ -458,6 +381,16 @@
 
         .form-heading {
             margin-bottom: 36px;
+            text-align: center;
+        }
+
+        .form-heading .section-label {
+            margin: 0 0 18px;
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
         }
 
         .form-heading h3 {
@@ -471,7 +404,7 @@
 
         .form-heading p {
             max-width: 520px;
-            margin: 18px 0 0;
+            margin: 18px auto 0;
             color: var(--muted);
             font-size: 14px;
             line-height: 1.75;
@@ -739,51 +672,39 @@
             transition: transform 2.7s ease-out, opacity 2.7s ease-out;
         }
 
-        @media (max-width: 1100px) {
-            .hero-card,
-            .hero-overlay {
-                min-height: 720px;
-            }
-
-            .floating-badge {
-                right: 350px;
-            }
-
-            .photo-two {
-                right: 250px;
-            }
-
-            .photo-three {
-                right: 46px;
-            }
-
-            .wish-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .wish-intro {
-                min-height: 420px;
-            }
-        }
-
         @media (max-width: 820px) {
+            .top-bar {
+                top: 12px;
+                width: calc(100% - 24px);
+                padding: 10px 10px 10px 16px;
+            }
+
+            .brand {
+                font-size: 21px;
+            }
+
+            .nav-link {
+                padding: 11px 14px;
+                font-size: 11px;
+            }
+
             .hero {
-                padding: 96px 16px 55px;
+                padding: 96px 16px 22px;
             }
 
             .hero-card,
             .hero-overlay {
-                min-height: 820px;
+                min-height: 760px;
             }
 
             .hero-overlay {
-                padding: 34px 24px 290px;
+                padding: 34px 24px;
                 justify-content: flex-start;
             }
 
-            .hero-main-image::after {
+            .hero-image::after {
                 background:
-                    linear-gradient(to bottom, rgba(27,22,19,0.58) 0%, rgba(27,22,19,0.30) 42%, rgba(27,22,19,0.18) 58%, rgba(27,22,19,0.42) 100%);
+                    linear-gradient(to bottom, rgba(27,22,19,0.58) 0%, rgba(27,22,19,0.26) 42%, rgba(27,22,19,0.24) 65%, rgba(27,22,19,0.42) 100%);
             }
 
             .hero-title {
@@ -810,84 +731,32 @@
                 max-width: 300px;
             }
 
-            .floating-badge {
-                top: auto;
-                right: 24px;
-                bottom: 260px;
-                width: 120px;
-                height: 120px;
+            .second-photo-section {
+                padding: 0 16px 36px;
             }
 
-            .floating-badge p {
-                font-size: 18px;
-            }
-
-            .floating-badge span {
-                font-size: 8px;
-                letter-spacing: 0.18em;
-            }
-
-            .floating-photo {
-                border-width: 7px;
-            }
-
-            .photo-two {
-                left: 24px;
-                right: auto;
-                bottom: 26px;
-                width: 46%;
-                height: 220px;
-            }
-
-            .photo-three {
-                right: 24px;
-                bottom: 22px;
-                width: 34%;
-                height: 180px;
-            }
-
-            .top-bar {
-                top: 12px;
-                width: calc(100% - 24px);
-                padding: 10px 10px 10px 16px;
-            }
-
-            .brand {
-                font-size: 21px;
-            }
-
-            .nav-link {
-                padding: 11px 14px;
-                font-size: 11px;
+            .second-photo-card img {
+                height: 340px;
             }
 
             .wish-section {
-                padding: 26px 14px 90px;
-            }
-
-            .wish-intro {
-                padding: 32px;
-                border-radius: 30px;
+                padding: 8px 14px 90px;
             }
 
             .form-card {
                 padding: 38px 20px 30px;
                 border-radius: 30px;
             }
-
-            .form-heading {
-                text-align: center;
-            }
         }
 
         @media (max-width: 520px) {
             .hero-card,
             .hero-overlay {
-                min-height: 760px;
+                min-height: 690px;
             }
 
             .hero-overlay {
-                padding: 30px 18px 250px;
+                padding: 28px 18px;
             }
 
             .hero-title {
@@ -913,31 +782,24 @@
                 font-size: 11px;
             }
 
-            .photo-two {
-                width: 48%;
-                height: 180px;
-                left: 14px;
-                bottom: 16px;
-                border-radius: 22px;
+            .second-photo-card {
+                border-radius: 24px;
             }
 
-            .photo-three {
-                width: 36%;
-                height: 145px;
-                right: 14px;
-                bottom: 16px;
-                border-radius: 22px;
+            .second-photo-card img {
+                height: 260px;
             }
 
-            .floating-badge {
-                right: 14px;
-                bottom: 195px;
-                width: 102px;
-                height: 102px;
+            .second-photo-caption {
+                padding: 14px 16px 16px;
+                font-size: 13px;
             }
 
-            .wish-intro h2,
             .form-heading h3 {
+                font-size: 46px;
+            }
+
+            .success-message h3 {
                 font-size: 46px;
             }
 
@@ -988,7 +850,7 @@
             <div class="hero-inner">
                 <div class="hero-card reveal">
 
-                    <div class="hero-main-image">
+                    <div class="hero-image">
                         <img
                             src="images/couple-main.jpg"
                             alt="Ерасыл и Дана"
@@ -1029,57 +891,34 @@
                         </div>
                     </div>
 
-                    <div class="floating-badge">
-                        <p>
-                            With love
-                            <span>12 · 09 · 2026</span>
-                        </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="second-photo-section">
+            <div class="second-photo-wrap reveal">
+                <div class="second-photo-card">
+                    <img
+                        src="images/couple-2.jpg"
+                        alt="Фотография Ерасыла и Даны"
+                        onerror="this.closest('.second-photo-card').style.display='none';"
+                    >
+
+                    <div class="second-photo-caption">
+                        С любовью и благодарностью за то, что вы разделяете этот день вместе с нами.
                     </div>
-
-                    <figure class="floating-photo photo-two">
-                        <img
-                            src="images/couple-2.jpg"
-                            alt="Фотография молодожёнов"
-                            onerror="this.closest('.floating-photo').style.display='none';"
-                        >
-                    </figure>
-
-                    <figure class="floating-photo photo-three">
-                        <img
-                            src="images/couple-3.jpg"
-                            alt="Фотография пары"
-                            onerror="this.closest('.floating-photo').style.display='none';"
-                        >
-                    </figure>
-
                 </div>
             </div>
         </section>
 
         <section class="wish-section" id="wish-form">
-            <div class="wish-layout reveal">
-
-                <aside class="wish-intro">
-                    <div class="wish-intro-top">
-                        <p>Для нас это важно</p>
-
-                        <h2>
-                            Оставьте частичку своего тепла
-                        </h2>
-                    </div>
-
-                    <div class="wish-intro-bottom">
-                        <p>
-                            Это может быть короткое поздравление,
-                            воспоминание, мудрый совет или просто
-                            пожелание от сердца.
-                        </p>
-                    </div>
-                </aside>
+            <div class="wish-inner reveal">
 
                 <div class="form-card">
 
                     <div class="form-heading">
+                        <p class="section-label">Книга пожеланий</p>
+
                         <h3>
                             Ваше пожелание
                         </h3>
