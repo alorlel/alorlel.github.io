@@ -24,7 +24,6 @@
     <style>
         :root {
             --bg: #f6f0e8;
-            --bg-soft: #fbf7f1;
             --text: #221f1c;
             --muted: #7c7268;
             --accent: #a57a59;
@@ -152,7 +151,7 @@
         .hero {
             position: relative;
             z-index: 1;
-            padding: 108px 24px 28px;
+            padding: 108px 24px 52px;
         }
 
         .hero-inner {
@@ -187,7 +186,7 @@
             position: absolute;
             inset: 0;
             background:
-                linear-gradient(90deg, rgba(27,22,19,0.64) 0%, rgba(27,22,19,0.42) 34%, rgba(27,22,19,0.16) 68%, rgba(27,22,19,0.14) 100%),
+                linear-gradient(90deg, rgba(27,22,19,0.66) 0%, rgba(27,22,19,0.44) 36%, rgba(27,22,19,0.20) 68%, rgba(27,22,19,0.16) 100%),
                 linear-gradient(to top, rgba(27,22,19,0.34), rgba(27,22,19,0.04));
         }
 
@@ -205,7 +204,7 @@
 
         .eyebrow {
             margin: 0 0 22px;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.92);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.34em;
@@ -221,7 +220,7 @@
             font-weight: 400;
             line-height: 0.78;
             letter-spacing: -0.06em;
-            text-shadow: 0 12px 35px rgba(0,0,0,0.15);
+            text-shadow: 0 12px 35px rgba(0,0,0,0.16);
         }
 
         .hero-title span {
@@ -247,12 +246,12 @@
             content: "";
             width: 64px;
             height: 1px;
-            background: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.32);
         }
 
         .date-row p {
             margin: 0;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.92);
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 0.22em;
@@ -263,11 +262,11 @@
         .hero-text {
             max-width: 540px;
             margin: 26px 0 0;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.92);
             font-family: var(--serif);
             font-size: clamp(23px, 2.6vw, 32px);
             line-height: 1.36;
-            text-shadow: 0 8px 22px rgba(0,0,0,0.12);
+            text-shadow: 0 8px 22px rgba(0,0,0,0.14);
         }
 
         .hero-actions {
@@ -315,52 +314,15 @@
         .mini-note {
             max-width: 230px;
             margin: 0;
-            color: rgba(255,255,255,0.82);
+            color: rgba(255,255,255,0.84);
             font-size: 12px;
-            line-height: 1.6;
-        }
-
-        .second-photo-section {
-            position: relative;
-            z-index: 1;
-            padding: 0 24px 44px;
-        }
-
-        .second-photo-wrap {
-            width: 100%;
-            max-width: 1180px;
-            margin: 0 auto;
-        }
-
-        .second-photo-card {
-            width: 100%;
-            max-width: 760px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 34px;
-            background: #eadfd2;
-            box-shadow: var(--shadow);
-        }
-
-        .second-photo-card img {
-            width: 100%;
-            height: 460px;
-            object-fit: cover;
-        }
-
-        .second-photo-caption {
-            padding: 18px 22px 20px;
-            text-align: center;
-            background: rgba(255,255,255,0.55);
-            color: var(--muted);
-            font-size: 14px;
             line-height: 1.6;
         }
 
         .wish-section {
             position: relative;
             z-index: 1;
-            padding: 12px 24px 120px;
+            padding: 18px 24px 120px;
         }
 
         .wish-inner {
@@ -384,7 +346,7 @@
             text-align: center;
         }
 
-        .form-heading .section-label {
+        .section-label {
             margin: 0 0 18px;
             color: var(--accent);
             font-size: 11px;
@@ -689,7 +651,7 @@
             }
 
             .hero {
-                padding: 96px 16px 22px;
+                padding: 96px 16px 34px;
             }
 
             .hero-card,
@@ -704,7 +666,7 @@
 
             .hero-image::after {
                 background:
-                    linear-gradient(to bottom, rgba(27,22,19,0.58) 0%, rgba(27,22,19,0.26) 42%, rgba(27,22,19,0.24) 65%, rgba(27,22,19,0.42) 100%);
+                    linear-gradient(to bottom, rgba(27,22,19,0.62) 0%, rgba(27,22,19,0.34) 42%, rgba(27,22,19,0.28) 65%, rgba(27,22,19,0.48) 100%);
             }
 
             .hero-title {
@@ -729,14 +691,6 @@
 
             .mini-note {
                 max-width: 300px;
-            }
-
-            .second-photo-section {
-                padding: 0 16px 36px;
-            }
-
-            .second-photo-card img {
-                height: 340px;
             }
 
             .wish-section {
@@ -780,19 +734,6 @@
             .mini-note {
                 max-width: 100%;
                 font-size: 11px;
-            }
-
-            .second-photo-card {
-                border-radius: 24px;
-            }
-
-            .second-photo-card img {
-                height: 260px;
-            }
-
-            .second-photo-caption {
-                padding: 14px 16px 16px;
-                font-size: 13px;
             }
 
             .form-heading h3 {
@@ -895,22 +836,6 @@
             </div>
         </section>
 
-        <section class="second-photo-section">
-            <div class="second-photo-wrap reveal">
-                <div class="second-photo-card">
-                    <img
-                        src="images/couple-2.jpg"
-                        alt="Фотография Ерасыла и Даны"
-                        onerror="this.closest('.second-photo-card').style.display='none';"
-                    >
-
-                    <div class="second-photo-caption">
-                        С любовью и благодарностью за то, что вы разделяете этот день вместе с нами.
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="wish-section" id="wish-form">
             <div class="wish-inner reveal">
 
@@ -938,7 +863,7 @@
                     <form
                         class="wish-form"
                         id="weddingWishForm"
-                        action="https://formspree.io/f/YOUR_FORM_ID"
+                        action="https://formspree.io/f/mrewkvll"
                         method="POST"
                     >
 
